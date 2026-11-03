@@ -1,0 +1,83 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #050b06;
+  overflow: hidden;
+}
+
+#game {
+  width: 100%;
+  height: 100%;
+}
+
+/* Debug panel, only added with ?debug in the URL. */
+.debug {
+  font: 13px Menlo, Consolas, monospace;
+  color: #eaf5df;
+}
+
+.debug button {
+  font: inherit;
+  color: inherit;
+  background: #10241a;
+  border: 1px solid #56775a;
+  padding: 3px 6px;
+  cursor: pointer;
+}
+
+.debug-bar {
+  position: fixed;
+  left: 8px;
+  bottom: 8px;
+  z-index: 10;
+  display: flex;
+  gap: 6px;
+}
+
+.debug-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0 0 0 / 0.6);
+}
+
+.debug-overlay[hidden] {
+  display: none;
+}
+
+.debug-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: min(560px, 90vw);
+  background: #0c1a10;
+  border: 1px solid #56775a;
+  padding: 12px 16px;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.debug-box h3 {
+  margin: 0 0 4px;
+  font-size: 13px;
+}
+
+.debug .debug-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.debug-showcase:hover {
+  border-color: #eaf5df;
+}
+
+.debug-showcase small {
+  color: #6f8f68;
+}
